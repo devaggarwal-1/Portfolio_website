@@ -48,7 +48,7 @@ function Home() {
                 <motion.img src="./scroll.png" alt="" className='scroll_img' variants={variants} animate="scroll" />
             </motion.div>
 
-            <img src="./user1.jpg" alt="" className='home_img user-img' />
+            <img src="user1.jpg" alt="" className='home_img user-img' />
         </div>
     )
 }
