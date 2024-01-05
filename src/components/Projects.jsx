@@ -1,55 +1,48 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
+import ProjectCard from './ProjectCard';
 
 function Projects() {
+
+    const [projectsArray, setProjectsArray] = useState([]);
+    const repoNames = ['RecipeWebsite', 'Portfolio_website', 'StockTracker']
+    const repoDesc = [
+        'A Recipe Website where you can search for recipes and add them to your favourite list.Frontend using React and backend using express.js with PostgreSQL for database. Coded using Typescript.',
+        'This is my portfolio website. Made using HTML, CSS, React and animations using framer-motion.',
+        'StockTracker is a full-stack web application that allows users to search and track stocks efficiently. The platform is built using React for the front end, Node.js and Express.js for the backend, and MongoDB as the database.'
+    ]
+
+    const API = "https://api.github.com";
+
+    useEffect(() => {
+
+        const getProjects = async () => {
+            try {
+                repoNames.map(async (repo) => {
+                    const response = await fetch(`${API}/repos/devaggarwal-1/${repo}`)
+                    const repoInfo = await response.json();
+
+                    setProjectsArray((prev) => [...prev, { name: repoInfo.name, url: repoInfo.html_url, updated: repoInfo.updated_at }])
+                })
+
+            } catch (error) {
+                console.log(error)
+            }
+
+        }
+        getProjects()
+
+    }, [])
+
+
+    console.log(projectsArray)
+
     return (
-        <section class="projects" id="projects">
-            <h2 class="projects-title">Some of my Recent Projects</h2>
-            <div class="projects-container">
-                <div class="project-container project-card">
-                    <img
-                        src="assets/images/expenseTracker.png"
-                        alt="expense-tracker"
-                        loading="lazy"
-                        class="project-pic"
-                    />
-                    <h3 class="project-title">Expense Tracker</h3>
-                    <p class="project-details">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-                        ratione vel inventore labore commodi modi quos culpa aut saepe!
-                        Alias!
-                    </p>
-                    <a href="#" target="_blank" class="project-link">Check it Out</a>
-                </div>
-                <div class="project-container project-card">
-                    <img
-                        src="assets/images/netflixClone.png"
-                        alt="netflic-clone"
-                        loading="lazy"
-                        class="project-pic"
-                    />
-                    <h3 class="project-title">Netflix Clone</h3>
-                    <p class="project-details">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-                        ratione vel inventore labore commodi modi quos culpa aut saepe!
-                        Alias!
-                    </p>
-                    <a href="#" target="_blank" class="project-link">Check it Out</a>
-                </div>
-                <div class="project-container project-card">
-                    <img
-                        src="assets/images/greenyEarth.png"
-                        alt="greeny-earth"
-                        loading="lazy"
-                        class="project-pic"
-                    />
-                    <h3 class="project-title">Greeny Earth</h3>
-                    <p class="project-details">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-                        ratione vel inventore labore commodi modi quos culpa aut saepe!
-                        Alias!
-                    </p>
-                    <a href="#" target="_blank" class="project-link">Check it Out</a>
-                </div>
+        <section className="projects" id="projects">
+            <h1 className='projects_heading'>Projects</h1>
+            <div className="projectContainer">
+                {projectsArray.map((project, index) => (
+                    <ProjectCard value={project} desc={repoDesc[index]} key={index} />
+                ))}
             </div>
         </section>
     )

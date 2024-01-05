@@ -1,64 +1,42 @@
 import React from 'react'
 
 function Skills() {
+
+    const skills = [
+        'Python',
+        'Java',
+        'C++',
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'TypeScript',
+        'React',
+        'Node.js',
+        'Express.js',
+        'MySQL',
+        'MongoDB',
+        'SASS',
+        'Material UI',
+        'Git',
+
+    ]
+
     return (
         <div className='skills' id='skills'>
-            <h2>My Skills</h2>
+            <div className="skills-container">
+                <h2>My Skills</h2>
 
-            <div className="row">
-
-                <div className="item">
-                    <div className="item-text">
-                        <span>Javascript</span>
-                        <span className='w-90'>90%</span>
-                    </div>
-                    <div className="progress">
-                        <div className="progress-bar w-90">
-
-                        </div>
-                    </div>
-                </div>
-
-                <div className="item">
-                    <div className="item-text">
-                        <span>HTML5</span>
-                        <span className='w-95'>95%</span>
-                    </div>
-                    <div className="progress">
-                        <div className="progress-bar w-95">
-
-                        </div>
-                    </div>
-                </div>
-
-                <div className="item">
-                    <div className="item-text">
-                        <span>CSS3</span>
-                        <span className='w-80'>80%</span>
-                    </div>
-                    <div className="progress">
-                        <div className="progress-bar w-80">
-
-                        </div>
-                    </div>
-                </div>
-
-                <div className="item">
-                    <div className="item-text">
-                        <span>React</span>
-                        <span className='w-75'>75%</span>
-                    </div>
-                    <div className="progress">
-                        <div className="progress-bar w-75">
-
-                        </div>
-                    </div>
-                </div>
-
-
-
+                <ul className='skills_list'>
+                    {skills.map((skill) => (
+                        <li className='skills_list-item btn btn--plain'>
+                            {skill}
+                        </li>
+                    ))}
+                </ul>
             </div>
+            <hr />
         </div>
+
     )
 }
 
