@@ -12,7 +12,7 @@ function About() {
                 <h1 className='about_heading'>About Me </h1>
 
                 <div className="about_body">
-                    <img src="/user2.jpg" alt="" className='about_img user-img' />
+                    <img src="user2.jpg" alt="" className='about_img user-img' />
 
                     <div className="intro_cv">
                         <h3>
