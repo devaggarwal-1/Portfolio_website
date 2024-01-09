@@ -56,8 +56,8 @@ function Contact() {
                         <textarea name="message" id="message" cols="30" rows="10" placeholder='MESSAGE' className='form-control' />
 
                         <button className='contact_submit_btn'>Submit</button>
-                        <p>{error && "Error"}</p>
-                        <p>{success && "Success"}</p>
+                        <p className='contact_error red'>{error && "Error"}</p>
+                        <p className='success white'>{success && "Success"}</p>
 
                     </form>
                 </div>

@@ -11,8 +11,10 @@ function App() {
 
 
   return (
+
     <>
       <Navbar />
+
       <Home />
       <About />
       <Skills />
@@ -20,6 +22,7 @@ function App() {
       <Contact />
       <Footer />
     </>
+
   )
 }
 

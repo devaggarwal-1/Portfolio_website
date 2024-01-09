@@ -19,7 +19,9 @@ html {
 body {
   /* background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%); */
   font-family: 'Roboto', sans-serif;
+
 }
+
 
 /* Navbar */
 
@@ -85,9 +87,13 @@ body {
 
 }
 
-.nav-links.scrolled li button:hover {
+.nav-links.scrolled li button {
   font-size: 20px;
   color: white
+}
+
+.nav-links.scrolled li button:hover {
+  color: black
 }
 
 
@@ -100,20 +106,18 @@ body {
   gap: 200px;
   align-items: center;
   justify-content: center;
-  /* background: url('../public/bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover; */
-
+  max-width: 70rem;
+  /* border: 2px solid red; */
+  margin: auto;
+  /* border: 2px solid red; */
 
 }
 
 .heading {
   display: flex;
   flex-direction: column;
-  /* line-height: 20px; */
   font-weight: bold;
-  font-size: 4.8rem;
-
+  font-size: 4rem;
 }
 
 .home_main a {
@@ -127,13 +131,14 @@ body {
 }
 
 .home_main .socials a {
-  font-size: 40px;
+  font-size: 50px;
   color: black;
 }
 
 .home_main .socials a:hover {
   color: var(--secondary-purple-color);
   animation: bounce 0.7s infinite;
+
 }
 
 .home_img {
@@ -163,13 +168,16 @@ body {
   width: 70%;
   margin: 0 auto;
   padding-top: 10vh;
+  width: 70rem;
+  margin: auto;
+  /* border: 2px solid red; */
 }
 
 .about_heading {
   text-align: center;
   font-weight: 300;
   text-decoration: underline;
-  margin-left: 150px;
+  margin-left: 370px;
 
 }
 
@@ -194,8 +202,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: left;
+  align-items: center;
   height: 100%;
+
 }
 
 .intro_cv h3 {
@@ -205,8 +214,16 @@ body {
   text-align: center;
 }
 
+.resume_link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
 .intro_cv button {
-  width: 25%;
+  width: 20%;
+  margin: auto;
   padding: 10px;
   border: none;
   border-radius: 10px;
@@ -215,7 +232,8 @@ body {
   font-size: 1rem;
   font-family: inherit;
   color: white;
-  margin-left: 150px;
+  /* margin-left: 150px; */
+  margin-top: 30px;
 }
 
 .intro_cv button:hover {
@@ -289,15 +307,15 @@ body {
 .projects {
   padding-top: 10vh;
   font-family: inherit;
-  width: 80%;
+  max-width: 70rem;
   margin: auto;
 }
 
 .projectContainer {
   margin: 4rem 0;
   display: flex;
-  /* gap: 6rem; */
   flex-wrap: wrap;
+  /* gap: 20px; */
 }
 
 .projects_heading {
@@ -310,7 +328,7 @@ body {
 }
 
 .projectCard {
-  margin: 0 3rem 5rem 0;
+  margin: 0 3rem 3rem 0;
   width: 45%;
   padding: 25px;
   display: flex;
@@ -498,6 +516,9 @@ body {
   color: var(--secondary-purple-color);
 }
 
+.white {
+  color: white;
+}
 
 
 /* Footer */

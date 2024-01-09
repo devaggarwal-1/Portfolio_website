@@ -2,6 +2,7 @@ import React from 'react'
 import user from "../assets/user.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFile } from "@fortawesome/free-solid-svg-icons"
+import resumePdf from "../assets/resume_new.pdf"
 
 function About() {
     return (
@@ -20,7 +21,10 @@ function About() {
                             Despite my limited work experience, my skill set speaks volumes about my dedication to the world of web development.
 
                         </h3>
-                        <button className='resume_btn'>Download CV<FontAwesomeIcon icon={faFile} className='cvIcon' /></button>
+                        <a href={resumePdf} download="resumePdf" target='_blank' className='resume_link'>
+
+                            <button className='resume_btn'>Download CV<FontAwesomeIcon icon={faFile} className='cvIcon' /></button>
+                        </a>
                     </div>
 
                 </div>
