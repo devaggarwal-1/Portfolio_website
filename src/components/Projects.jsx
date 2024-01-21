@@ -4,11 +4,12 @@ import ProjectCard from './ProjectCard';
 function Projects() {
 
     const [projectsArray, setProjectsArray] = useState([]);
-    const repoNames = ['RecipeWebsite', 'Portfolio_website', 'StockTracker']
+    const repoNames = ['RecipeWebsite', 'Portfolio_website', 'StockTracker', 'Chip-8-Emulator']
     const repoDesc = [
         'A Recipe Website where you can search for recipes and add them to your favourite list.Frontend using React and backend using express.js with PostgreSQL for database. Coded using Typescript.',
         'This is my portfolio website. Made using HTML, CSS, React and animations using framer-motion.',
-        'StockTracker is a full-stack web application that allows users to search and track stocks efficiently. The platform is built using React for the front end, Node.js and Express.js for the backend, and MongoDB as the database.'
+        'StockTracker is a full-stack web application that allows users to search and track stocks efficiently. The platform is built using React for the front end, Node.js and Express.js for the backend, and MongoDB as the database.',
+        'This project is a Chip-8 emulator written in Javascript.This emulator aims to recreate the functionality of the Chip-8 system, allowing users to run and play classic Chip-8 games on modern hardware.'
     ]
 
     const API = "https://api.github.com";
