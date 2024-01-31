@@ -2,7 +2,7 @@ import React from 'react'
 import user from "../assets/user.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFile } from "@fortawesome/free-solid-svg-icons"
-import resumePdf from "../assets/resume_new.pdf"
+import resumePdf from "../assets/resume_dev.pdf"
 
 function About() {
     return (

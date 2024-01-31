@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { motion } from "framer-motion"
 
-const ProjectCard = ({ value, desc }) => {
+const ProjectCard = ({ value }) => {
 
-    const { name, url, updated } = value
+    const { name, url, updated, desc } = value
     const monthNames = [
         "January", "February", "March", "April",
         "May", "June", "July", "August",
