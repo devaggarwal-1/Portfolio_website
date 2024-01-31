@@ -27,8 +27,8 @@ function Skills() {
                 <h2>My Skills</h2>
 
                 <ul className='skills_list'>
-                    {skills.map((skill) => (
-                        <li className='skills_list-item btn btn--plain'>
+                    {skills.map((skill, i) => (
+                        <li className='skills_list-item btn btn--plain' key={i}>
                             {skill}
                         </li>
                     ))}

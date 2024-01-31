@@ -7,7 +7,7 @@ function Footer() {
         <div className='footer'>
             <hr />
             <div className="container">
-                <p><FontAwesomeIcon icon={faCode} /> with <FontAwesomeIcon icon={faHeart} />  by Dev Aggarwal</p>
+                <p><FontAwesomeIcon icon={faCode} /> with <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />  by Dev Aggarwal</p>
             </div>
         </div>
     )

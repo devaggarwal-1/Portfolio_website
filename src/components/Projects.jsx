@@ -22,8 +22,8 @@ function Projects() {
                 repoNames.map(async (repo, index) => {
                     const response = await fetch(`${API}/repos/devaggarwal-1/${repo}`)
                     const repoInfo = await response.json();
-                    console.log(index)
-                    setProjectsArray((prev) => [...prev, { name: repoInfo.name, url: repoInfo.html_url, updated: repoInfo.updated_at, desc: repoDesc[index] }])
+
+                    await setProjectsArray((prev) => [...prev, { name: repoInfo.name, url: repoInfo.html_url, updated: repoInfo.updated_at, desc: repoDesc[index] }])
                 })
 
             } catch (error) {
@@ -36,7 +36,6 @@ function Projects() {
     }, [])
 
 
-    console.log(projectsArray)
 
     return (
         <section className="projects" id="projects">
