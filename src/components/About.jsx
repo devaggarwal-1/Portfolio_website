@@ -17,7 +17,7 @@ function About() {
 
                     <div className="intro_cv">
                         <h3>
-                            Hello there! 👋 I'm a passionate web developer eager to transform digital landscapes with my coding prowess.
+                            Hello there! 👋 I'm a passionate software developer eager to transform digital landscapes with my coding prowess.
                             Despite my limited work experience, my skill set speaks volumes about my dedication to the world of web development.
 
                         </h3>

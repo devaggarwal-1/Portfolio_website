@@ -157,14 +157,11 @@ body {
 
 /* About*/
 
-.about {
-  /* background: url('../public/bg2.jpg');
-  background-repeat: no-repeat;
-  background-size: cover; */
-}
+.about {}
+
 
 .aboutContainer {
-  min-height: 80vh;
+  height: 80vh;
   width: 70%;
   margin: 0 auto;
   padding-top: 10vh;
@@ -557,4 +554,171 @@ body {
   60% {
     transform: translateY(-5px);
   }
+}
+
+
+@media screen and (max-width : 500px) {
+
+  /* Navbar */
+
+  .navbar {
+    position: relative;
+    padding: 20px;
+    border-bottom: 2px solid gray;
+    background: var(--purple-color);
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: none;
+    color: #ddd;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links li button {
+    font-size: 1rem;
+    color: whitesmoke;
+
+  }
+
+  .nav-links li button:hover {
+    color: black;
+  }
+
+  /* Home */
+
+  .home {
+    flex-direction: column-reverse;
+    gap: 30px;
+    height: 60vh;
+  }
+
+
+  .home_img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .heading {
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+  }
+
+  .home_main .socials a {
+    font-size: 2rem;
+  }
+
+  .home_main img {
+    display: none;
+  }
+
+  /* About */
+
+  .about {
+    height: 60vh;
+
+  }
+
+  .aboutContainer {
+    width: 100%;
+    padding-top: 2vh;
+    height: 60vh;
+
+  }
+
+  .about_heading {
+    margin: 0;
+  }
+
+  .about_img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .about_body {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .intro_cv h3 {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .intro_cv button {
+    width: 40%;
+    margin: 10px 0;
+  }
+
+
+  .intro_cv button:hover {
+    transition: none;
+    transform: none;
+    background-color: none;
+    width: 40%;
+  }
+
+  hr {
+    /* display: none; */
+  }
+
+  /* Skills */
+
+  .skills-container {
+    padding-top: 5vh;
+    width: 100%;
+  }
+
+
+  /* Projects  */
+
+  .projects {
+    padding-top: 5vh;
+  }
+
+  .projectContainer {
+    margin: 2rem 0;
+  }
+
+  .projects_heading {
+    text-align: center;
+    margin: 0;
+  }
+
+  .projectCard {
+    margin: 1rem auto;
+    width: 85%;
+    font-size: 1rem;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .projectCard a {
+    width: 30%;
+  }
+
+  /* Contact */
+
+  .contact-container {
+    width: 90%;
+  }
+
+  .contact h1 {
+    font-size: 2rem;
+  }
+
+  /* Footer */
+  .footer {}
+
 }

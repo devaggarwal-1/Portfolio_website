@@ -11,13 +11,12 @@ const ProjectCard = ({ value }) => {
         "May", "June", "July", "August",
         "September", "October", "November", "December"
     ];
-
     const date = new Date(updated)
     const year = date.getFullYear()
     const month = date.getMonth()
     const monthName = monthNames[month];
     const day = date.getDate()
-
+    console.log(updated)
     return (
         <motion.div className='projectCard' whileHover={{ y: -5, transition: { duration: 0.4 } }}>
             <h1>{name}</h1>
