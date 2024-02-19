@@ -18,7 +18,7 @@ function About() {
                     <div className="intro_cv">
                         <h3>
                             Hello there! 👋 I'm a passionate software developer eager to transform digital landscapes with my coding prowess.
-                            Despite my limited work experience, my skill set speaks volumes about my dedication to the world of web development.
+                            Despite my limited work experience, my skill set speaks volumes about my dedication to the world of Tech.
 
                         </h3>
                         <a href={resumePdf} download="resumePdf" target='_blank' className='resume_link'>
