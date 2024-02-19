@@ -16,7 +16,6 @@ const ProjectCard = ({ value }) => {
     const month = date.getMonth()
     const monthName = monthNames[month];
     const day = date.getDate()
-    console.log(updated)
     return (
         <motion.div className='projectCard' whileHover={{ y: -5, transition: { duration: 0.4 } }}>
             <h1>{name}</h1>
