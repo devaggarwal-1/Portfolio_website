@@ -3,6 +3,7 @@ import React from 'react'
 function Skills() {
 
     const skills = [
+        'ServiceNow',
         'Python',
         'Java',
         'C++',
